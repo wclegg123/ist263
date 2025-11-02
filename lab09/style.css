@@ -12,14 +12,6 @@ h1, h2 {
 }
 
 
-h1 {
-    font-size: 2em; 
-}
-
-h2 {
-    font-size: 1.5em; 
-}
-
 p {
     line-height: 1.6;
     color: #333;
@@ -48,3 +40,58 @@ nav {
     border-radius: 5px;
   }
   
+
+
+/* lab 9 additions */
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.skills-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex: 3;
+}
+
+.skill {
+    text-align: center;
+}
+
+.icons img {
+    width: 150px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.other-skills {
+    flex: 1;
+    background-color: #d0ffe1;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.other-skills h2 {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
