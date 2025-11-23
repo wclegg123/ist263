@@ -1,0 +1,639 @@
+/* ===================================
+   GLOBAL STYLES - styles.css
+   (Include this on ALL pages)
+   =================================== */
+
+/* ===================================
+   GLOBAL STYLES & RESET
+   =================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   NAVIGATION (SHARED ACROSS ALL PAGES)
+   =================================== */
+
+nav {
+    background-color: #e8f0f7;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a6c7d;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2c5f8d;
+}
+
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5a6c7d;
+}
+
+/* ===================================
+   CONTAINER & LAYOUT
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+/* ===================================
+   ACCESSIBILITY - FOCUS STATES
+   =================================== */
+
+a:focus,
+button:focus {
+    outline: 2px solid #2c5f8d;
+    outline-offset: 2px;
+}
+
+/* ===================================
+   RESPONSIVE NAVIGATION
+   =================================== */
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: #e8f0f7;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .nav-icon {
+        margin: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    nav {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+}
+
+
+/* ===================================
+   FILE 3 (REVISED): exercise.css
+   (Include this on the Exercise page that combines Lifting and Cardio)
+   =================================== */
+
+/* ===================================
+   PAGE HEADERS
+   =================================== */
+
+   .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   SECTION 1: WEIGHT LIFTING ROUTINE (3 CARDS)
+   =================================== */
+
+.lifting-section {
+    margin-bottom: 4rem;
+}
+
+.split-days-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.split-day-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.split-day-image {
+    width: 100%;
+    height: 180px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.split-day-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-day-content {
+    padding: 1.5rem;
+}
+
+.split-day-content h3 {
+    color: #27ae60;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.split-day-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.split-day-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #555;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.split-day-list li:before {
+    content: "●";
+    position: absolute;
+    left: 0.75rem;
+    color: #27ae60;
+}
+
+/* ===================================
+   SECTION 2: CARDIO EXERCISES (3 CARDS)
+   =================================== */
+
+.cardio-section {
+    margin-bottom: 4rem;
+}
+
+.cardio-options-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardio-option-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardio-option-image {
+    width: 100%;
+    height: 160px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.cardio-option-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardio-option-content {
+    padding: 1.5rem;
+}
+
+.cardio-option-content h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cardio-option-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cardio-option-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #555;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.cardio-option-list li:before {
+    content: "●";
+    position: absolute;
+    left: 0.75rem;
+    color: #3498db;
+}
+
+/* ===================================
+   SECTION 3: FAVORITE EXERCISES
+   =================================== */
+
+.favorites-section {
+    margin-bottom: 4rem;
+}
+
+.favorites-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+}
+
+/* Top Row: Two Exercise Cards Side by Side */
+.favorites-top-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.favorite-exercise-card {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.favorite-exercise-image {
+    flex: 0 0 150px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.favorite-exercise-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.favorite-exercise-text {
+    flex: 1;
+}
+
+.favorite-exercise-text h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.favorite-exercise-text p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Bottom Row: Large Text Box on Left, Large Image on Right */
+.favorites-bottom-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.favorites-history-text {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-history-text h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.favorites-history-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.favorites-history-image {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.favorites-history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Final Row: Large Image on Left, Large Text Box on Right */
+.favorites-final-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.favorites-final-image {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.favorites-final-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.favorites-final-text {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-final-text h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.favorites-final-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 768px) {
+    /* Stack cards vertically on mobile */
+    .split-days-grid,
+    .cardio-options-grid {
+        flex-direction: column;
+    }
+    
+    .split-day-card,
+    .cardio-option-card {
+        min-width: 100%;
+    }
+    
+    /* Favorite exercises responsive */
+    .favorites-top-row {
+        flex-direction: column;
+    }
+    
+    .favorite-exercise-card {
+        min-width: 100%;
+        flex-direction: column;
+    }
+    
+    .favorite-exercise-image {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 200px;
+    }
+    
+    /* Bottom and final rows stack */
+    .favorites-bottom-row,
+    .favorites-final-row {
+        flex-direction: column;
+    }
+    
+    .favorites-history-image,
+    .favorites-final-image {
+        height: 250px;
+        min-width: 100%;
+    }
+    
+    .favorites-history-text,
+    .favorites-final-text {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header h1,
+    .favorites-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .split-day-content,
+    .cardio-option-content {
+        padding: 1rem;
+    }
+    
+    .favorites-history-text,
+    .favorites-final-text {
+        padding: 1rem;
+    }
+}

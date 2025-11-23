@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fitness Lifestyle - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="index.html" class="nav-icon-link" aria-label="Home"><img src="exampleimage.png" alt="Home" class="nav-icon"></a></li>
+                <li><a href="diet.html" class="active">Diet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Page Title -->
+        <div class="home-title">
+            <h1>My Fitness<br>Lifestyle Page</h1>
+        </div>
+
+        <!-- Top Section: Biography Box + Image -->
+        <section class="home-top-section">
+            <div class="home-biography-box">
+                <p>Short Biography and website introduction</p>
+            </div>
+            <div class="home-top-image">
+                <img src="exampleimage.png" alt="Fitness lifestyle image">
+            </div>
+        </section>
+
+        <!-- Middle Section: Image + Description Box -->
+        <section class="home-middle-section">
+            <div class="home-middle-image">
+                <img src="exampleimage.png" alt="Fitness activity image">
+            </div>
+            <div class="home-description-box">
+                <p>Home Page description/ Website Description</p>
+            </div>
+        </section>
+
+        <!-- Three Topics Section -->
+        <section class="home-topics-section">
+            <h2 class="home-topics-heading">Three Website Topics</h2>
+            
+            <div class="home-topics-grid">
+                <article class="home-topic-card">
+                    <div class="home-topic-image-container">
+                        <img src="exampleimage.png" alt="Diet topic icon">
+                    </div>
+                    <h3>Topic 1 (Diet)</h3>
+                    <p>Brief Description</p>
+                </article>
+
+                <article class="home-topic-card">
+                    <div class="home-topic-image-container">
+                        <img src="exampleimage.png" alt="Lifting topic icon">
+                    </div>
+                    <h3>Topic 2 (Lifting)</h3>
+                    <p>Brief Description</p>
+                </article>
+
+                <article class="home-topic-card">
+                    <div class="home-topic-image-container">
+                        <img src="exampleimage.png" alt="Cardio topic icon">
+                    </div>
+                    <h3>Topic 3 (Cardio)</h3>
+                    <p>Brief Description</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

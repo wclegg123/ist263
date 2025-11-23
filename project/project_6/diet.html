@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fitness Lifestyle - Diet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="home.html" class="nav-icon-link" aria-label="Home"><img src="exampleimage.png" alt="Home" class="nav-icon"></a></li>
+                <li><a href="diet.html" class="active">Diet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Diet Hero Section -->
+        <section class="diet-hero">
+            <div class="diet-image">
+                <img src="exampleimage.png" alt="Picture of Meal">
+            </div>
+            <div class="diet-circle">
+                <p>Diet (nutrition circle)</p>
+            </div>
+            <div class="diet-image">
+                <img src="exampleimage.png" alt="2nd Picture of Meal">
+            </div>
+        </section>
+
+        <!-- Diet Philosophy Text -->
+        <section class="diet-text-box">
+            <h2>Text discussing philosophy of meals, eating, my history with diet, dos and don'ts etc</h2>
+            <p>My approach to nutrition has evolved significantly over the years. I've learned that sustainable eating habits are far more important than restrictive diets or extreme cutting phases. The key is finding foods that you enjoy while meeting your macronutrient and micronutrient needs.</p>
+            <p>I focus on whole foods, adequate protein intake for muscle recovery and growth, complex carbohydrates for energy, and healthy fats for hormone production and overall health. Meal timing and consistency have been game-changers for me—eating at regular intervals keeps my energy stable throughout the day.</p>
+            <p>One of my biggest lessons has been that perfection isn't the goal. It's about making good choices most of the time and not letting occasional indulgences derail your progress. I've found that flexible dieting, where I allow myself occasional treats while hitting my overall nutrition targets, is the most sustainable approach for long-term success.</p>
+        </section>
+
+        <!-- Three Routine Egg-Related Meals -->
+        <section class="meals-section">
+            <h2 class="meals-heading">Three Routine Egg-Related Meals</h2>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="exampleimage.png" alt="Pictures of Recipe Items">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 1</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Start by whisking 3-4 eggs in a bowl with a splash of milk. Heat a non-stick pan over medium heat with a bit of butter. Pour in the egg mixture and gently scramble until fluffy and cooked through.</p>
+                    <p><strong>What I like about the meal:</strong> This classic scrambled egg breakfast is quick, protein-packed, and incredibly versatile. I love that I can add vegetables, cheese, or herbs to change up the flavor profile. It's perfect for post-workout recovery and keeps me full for hours. The simplicity means I can prepare it even on busy mornings.</p>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="exampleimage.png" alt="Pictures of Recipe Items">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 2</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Boil water in a pot, carefully add eggs, and let them cook for exactly 10 minutes for hard-boiled perfection. Immediately transfer to an ice bath to stop the cooking process and make peeling easier.</p>
+                    <p><strong>What I like about the meal:</strong> Hard-boiled eggs are the ultimate meal prep staple. I make a batch at the beginning of each week and have convenient, portable protein ready to go. They're perfect for quick snacks between meals or adding to salads. The consistency and reliability of this preparation method means I always have a nutritious option available.</p>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="exampleimage.png" alt="Pictures of Recipe Items">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 3</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Heat olive oil in a pan, crack 2-3 eggs directly into the pan, and cook sunny-side up or over-easy depending on preference. Season with salt, pepper, and red pepper flakes for extra flavor.</p>
+                    <p><strong>What I like about the meal:</strong> Fried eggs are my go-to for adding protein to any meal. I often place them on top of rice bowls, toast, or roasted vegetables. The runny yolk adds richness and ties all the flavors together. It's a simple technique that elevates any dish and provides excellent nutrition with minimal effort.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
