@@ -1,0 +1,464 @@
+/* ===================================
+   GLOBAL STYLES - styles.css
+   (Include this on ALL pages)
+   =================================== */
+
+/* ===================================
+   GLOBAL STYLES & RESET
+   =================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   NAVIGATION (SHARED ACROSS ALL PAGES)
+   =================================== */
+
+nav {
+    background-color: #e8f0f7;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a6c7d;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2c5f8d;
+}
+
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 1rem;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5a6c7d;
+}
+
+/* ===================================
+   CONTAINER & LAYOUT
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+/* ===================================
+   ACCESSIBILITY - FOCUS STATES
+   =================================== */
+
+a:focus,
+button:focus {
+    outline: 2px solid #2c5f8d;
+    outline-offset: 2px;
+}
+
+/* ===================================
+   RESPONSIVE NAVIGATION
+   =================================== */
+
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: #e8f0f7;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .nav-icon {
+        margin: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    nav {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+}
+
+
+
+
+
+/* ===================================
+   FILE 1 (REVISED): home.css
+   (Include this ONLY on the home page)
+   =================================== */
+
+/* ===================================
+   HOME PAGE - MAIN TITLE
+   =================================== */
+
+   .home-title {
+    margin-bottom: 2rem;
+}
+
+.home-title h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+/* ===================================
+   HOME PAGE - TOP SECTION (Biography + Image)
+   =================================== */
+
+   .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 200%large;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.home-top-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.home-biography-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-biography-box p {
+    text-align: center;
+    color: #999;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.home-top-image {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.home-top-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ===================================
+   HOME PAGE - MIDDLE SECTION (Image + Description)
+   =================================== */
+
+.home-middle-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.home-middle-image {
+    flex: 0 0 300px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.home-middle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.home-description-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-description-box p {
+    text-align: center;
+    color: #999;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ===================================
+   HOME PAGE - THREE TOPICS SECTION
+   =================================== */
+
+.home-topics-section {
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.home-topics-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4a5568;
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
+
+.home-topics-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home-topic-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: white;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Topic 1 - Diet (Light Blue Background) */
+.home-topic-card:nth-child(1) {
+    background-color: #e8f4f8;
+}
+
+/* Topic 2 - Lifting (White/Light Gray Background) */
+.home-topic-card:nth-child(2) {
+    background-color: #e8f4f8;
+}
+
+/* Topic 3 - Cardio (Light Blue Background) */
+.home-topic-card:nth-child(3) {
+    background-color: #e8f4f8;
+}
+
+.home-topic-image-container {
+    width: 340px;
+    height: 500px;
+    margin: 0 auto 1.5rem;
+    background-color: #e0e5eb;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-topic-image-container img {
+    width: 440px;
+    height: 500px;
+    object-fit: contain;
+}
+
+
+/* ===================================
+   HOME PAGE - RESPONSIVE DESIGN
+   =================================== */
+
+@media screen and (max-width: 768px) {
+    .home-title h1 {
+        font-size: 2rem;
+    }
+    
+    .home-top-section,
+    .home-middle-section {
+        flex-direction: column;
+    }
+    
+    .home-top-image,
+    .home-middle-image {
+        height: 250px;
+    }
+    
+    .home-middle-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .home-topics-grid {
+        flex-direction: column;
+    }
+    
+    .home-topic-card {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-title h1 {
+        font-size: 1.75rem;
+    }
+    
+    .home-topics-heading {
+        font-size: 1.75rem;
+    }
+    
+    .home-biography-box,
+    .home-description-box {
+        padding: 1.25rem;
+    }
+    
+    .home-topic-card {
+        padding: 1.5rem 1rem;
+    }
+}

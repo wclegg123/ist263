@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="willface.ico">
+    <title>My Fitness Lifestyle - Diet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="exercise.html">Exercise</a></li>
+                <li><a href="home.html" class="nav-icon-link" aria-label="Home"><img src="exampleimage.png" alt="Home" class="nav-icon"></a></li>
+                <li><a href="diet.html" class="active">Diet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Diet Hero Section -->
+        <header class="page-header">
+            <h1>Dietary Routines/Meals</h1>
+        <section class="diet-hero">
+            <div class="diet-image">
+                <img src="exampleimage.png" alt="AI generated picture of the foods I eat">
+            </div>
+            <div class="diet-circle">
+                <img src="../project_images/food/aifood.png">
+            </div>
+            <div class="diet-image">
+                <img src="exampleimage.png" alt="2nd Picture of Meal">
+            </div>
+        </section>
+
+        <!-- Diet Philosophy Text -->
+        <section class="diet-text-box">
+            <h2>My philosophy for meals, eating, dos and don'ts</h2>
+            <p>My approach to nutrition has evolved significantly over the years. I've learned that sustainable eating habits are far more important than restrictive diets to pack on weight and muscle. The key is finding foods that you enjoy while meeting your macronutrient and micronutrient needs.</p>
+            <p>I focus on whole foods, adequate protein intake for muscle recovery and growth, complex carbohydrates for energy, and healthy fats for hormone production and overall health. Meal timing and consistency have been game-changers for me—eating at regular intervals keeps my energy stable throughout the day.</p>
+            <p>One of my biggest lessons has been that perfection isn't the goal. It's about making good choices most of the time and not letting occasional indulgences derail your progress. I've found that my rigid routine and embrace consistency in my meals has allowed me to progress at a much faster pace than when I was constanly fluxuating with my dietary chocies</p>
+        </section>
+
+        <!-- Three Routine Egg-Related Meals -->
+        <section class="meals-section">
+            <h2 class="meals-heading">Three Go-To Meals - Egg Focused</h2>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="../project_images/food/beef_egg.JPG" alt="Pictures Beef and Egg meal">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 1: "Beefegg"</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Begin by putting .5 - 1lb of ground beef in a pot to cook. Sprinkle with seasoning while cooking - Salt, Garlic Powder, Pepper, or other mixes are good. Once most of the beef is almost cooked, begin preparing 4-8 eggs on a skillet. Compress the meat to one side of the pot to extract and pour out as much grease as possible, then put the beef on cool burner to wait for the eggs. Once the whites have begun cooking, mix the beef into the skillet and finish cooking the beef by scrambling it with the eggs. Finish scrambling the beef and eggs and place in a large container or bowl, mix with honey, sauce, butter, and enjoy</p>
+                    <p><strong>What I like about the meal:</strong> This scrambled egg and beef method is quick, protein-packed, and easy. It might not be the prettiest looking, but for someone looking to put on weight and gain muscle this is the ideal meal.</p>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="../project_images/food/anothermeal.JPG" alt="Picture of Noodle egg and other foods to eat with it">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 2: Noodle Egg + Sides</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Boil water in a pot, add noodle of choice - I chose rice noodles, and let them cook until bubbling. Once they start bubbling, prepare 4-8 eggs on a skillet, season them to preference with expectation of scrambling. Pour noodles into a strainer, and mix in with eggs, apply soy sauce and begin scrambling together. Meal is ready when eggs have soft yellow texture and noodles less soft. Apply sauce of choice, bon appetite. </p>
+                    <p><strong>What I like about the meal:</strong> Once again very easy to make, protein-packed, delivers carbs, and delicious. Like an egg fried rice adjacent meal with rice noodles, and pairs well with other displayed sides</p>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="meal-image">
+                    <img src="../project_images/food/smoothieingrediants.JPG" alt="Pictures of Recipe Items">
+                </div>
+                <div class="meal-content">
+                    <h3>Meal 3: Smoothie</h3>
+                    <p><strong>Cooking/Preparing Process:</strong> Collect ingrediants and blender. Fill blender cup with roughly 1/2 - 3/5 frozen fruit. For solids, add penut butter, nutella, granola, chia seeds, cinnamon, honey, or experiment. For liquids, add milk, chocolate milk, beetroot juice, fizzy drinks (good with berries), or other juices.</p>
+                    <p><strong>What I like about the meal:</strong> Super quick and easy, delivers variety of nutrients, can walk out the door with breakfast. Portable and potent</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
